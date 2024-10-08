@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+    <title>Blogging Application</title>
+</head>
+<body>
+    <%- include("./partials/navbar.ejs") %>
+
+    <div class="container mt-16">
+        <div class="card mx-auto" style="max-width: 500px; margin-top: 40px;">
+            <div class="card-body">
+                <h1 class="card-title text-center">Signup</h1>
+                <form method="POST" action="/user/signup">
+                    <div class="mb-3">
+                        <label for="Fullname" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="Fullname" aria-describedby="Fullname" name="Fullname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+                </form>
+                <div class="text-center mt-3">
+                    <p>Already have an account? <a href="/user/signin">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <%- include("./partials/script.ejs") %>
+</body>
+</html>

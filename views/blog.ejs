@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+    <title>Blogging Application</title>
+</head>
+<body>
+    <%- include("./partials/navbar.ejs") %>
+
+    <div class="container mt-5 d-flex justify-content-center">
+        <div class="card shadow-lg" style="width: 40rem;">
+            <div class="card-body">
+                <h1 class="card-title text-center mb-4">Add Blog</h1>
+                <form action="/blog/add" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Enter Your blog title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="body" class="form-label">Body</label>
+                        <textarea class="form-control" id="body" name="body"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="coverImage" class="form-label">Cover Image</label>
+                        <input type="file" class="form-control" id="coverImage" name="coverImageUrl">
+                    </div>
+                    <div class="mb-3 text-center">
+                        <button type="submit" class="btn btn-info">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <%- include("./partials/script.ejs") %>
+</body>
+</html>
